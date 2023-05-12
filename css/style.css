@@ -14,7 +14,54 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.city-container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.city {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.roma {
+    background-image: url('https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg?impolicy=fcrop&w=800&h=533&q=medium');
+}
+
+.napoli {
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/napoli-1653914862.png');
+}
+
+.milano {
+    background-image: url('https://media.istockphoto.com/id/493223692/it/foto/duomo-di-milano-italia.jpg?s=612x612&w=0&k=20&c=X8QrI64NuylVeasXYRnKoj2LEHJNgI5OcVwoQwzd0bo=');
+}
+
+.city-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: .2s all ease-in-out;
+}
+
+.overlay > h2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 5px 5px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
